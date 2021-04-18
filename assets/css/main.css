@@ -48,6 +48,10 @@
     display: block;
 }
 
+.header__navbar-item--has-notify:hover .header__notify {
+    display: block;
+}
+
 .header__navbar-item--strong {
     font-weight: 500;
 }
@@ -116,4 +120,117 @@
 
 .header__qr-download-img {
     height: 16px;
+}
+/* Notification */
+.header__notify {
+    position: absolute;
+    top: calc(100% + 14px);
+    right: 0;
+    width: 404px;
+    background-color: var(--white-color);
+    border: 1px solid #D3D3D3;
+    display: none;
+    animation: headerNotifyGrowth ease-in 0.2s;
+    transform-origin: 90% 0;
+    will-change: opacity, transform;
+}
+
+@keyframes headerNotifyGrowth {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.header__notify-header {
+    height: 40px;
+}
+
+.header__notify-header h3 {
+    color: #999;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 40px;
+    margin: 0 0 0 12px;
+    user-select: none;
+    cursor: default;
+}
+/* Create arrow notify */
+.header__notify-header::before {
+    content: "";
+    border-width: 20px 30px;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    position: absolute;
+    top: -30px;
+    right: 0;
+}
+/* Create bridge between 2 areas */
+.header__notify-header::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -20px;
+    width: 90px;
+    height: 20px;
+}
+
+.header__notify-list {
+    
+}
+
+.header__notify-item {
+    
+}
+
+.header__notify-item:hover {
+    background-color: #e7e5e5;
+}
+
+.header__notify-link {
+    text-decoration: none;
+    display: flex;
+    padding: 12px;
+}
+
+.header__notify-img {
+    width: 48px;
+    object-fit: contain;
+}
+
+.header__notify-info {
+    margin-left: 12px;
+}
+
+.header__notify-name {
+    font-size: 1.6rem;
+    display: block;
+    color: var(--text-color);
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.header__notify-description {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    display: block;
+    line-height: 1.4;
+}
+
+.header__notify-footer:hover {
+    background-color: #e7e5e5;
+}
+
+.header__notify-btn {
+    text-decoration: none;
+    color: var(--text-color);
+    text-align: center;
+    width: 100%;
+    display: block;
+    padding: 8px 48px;
 }

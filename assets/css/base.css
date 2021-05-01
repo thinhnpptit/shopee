@@ -129,7 +129,7 @@ html {
 .select-input {
     position: relative;
     min-width: 200px;
-    height: 43px;
+    height: 36px;
     padding: 0 12px;
     border-radius: 2px;
     background-color: var(--white-color);

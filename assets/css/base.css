@@ -143,6 +143,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 1;
 }
 
 .select-input:hover .select-input__list {
@@ -164,7 +165,7 @@ html {
     position: absolute;
     left: 0;
     right: 0;
-    top: 45px;
+    top: 40px;
     background-color: vaR(--white-color);
     border-radius: 2px;
     padding: 8px 16px;

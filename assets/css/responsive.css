@@ -101,6 +101,28 @@
         width: 110px;
     }
 
+    .footer__content {
+        padding: 0 16px;
+    }
+
+    .footer__heading {
+        text-align: center;
+    }
+
+    .footer-item__link,
+    .footer__download {
+        justify-content: center;
+    }
+
+    .footer__download-apps {
+        flex: unset;
+    }
+
+    .footer__download-app-link {
+        display: block;
+        padding: 6px 8px;
+    }
+
     @keyframes mobileSearchSideIn {
         from {
             top: calc(var(--header-height)/2);
